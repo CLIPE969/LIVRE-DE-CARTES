@@ -167,14 +167,12 @@ display:none;
 }
 
 @media (max-width:600px){
-  /* Téléphone : on conserve la largeur naturelle du jeu.
-     Rien n'est coupé sur les côtés et les cartes restent entières. */
   html, body{
     width:100% !important;
     min-width:0 !important;
     margin:0 !important;
     padding:0 !important;
-    overflow-x:auto !important;
+    overflow-x:hidden !important;
   }
 
   body{
@@ -183,9 +181,9 @@ display:none;
   }
 
   #jeu{
-    display:inline-block !important;
+    display:block !important;
     width:max-content !important;
-    max-width:none !important;
+    max-width:calc(100vw - 12px) !important;
     margin:2px auto 0 auto !important;
     box-sizing:border-box !important;
     overflow:visible !important;
@@ -194,24 +192,9 @@ display:none;
     right:auto !important;
   }
 
-  .zoneJeu{
-    width:auto !important;
-    justify-content:center !important;
-    gap:10px !important;
-    overflow:visible !important;
-  }
-
-  .page{
-    flex:none !important;
-  }
-
-  .grille{
-    flex:none !important;
-  }
-
   .ligneActions{
-    gap:3px !important;
-    flex-wrap:nowrap !important;
+    gap:3px;
+    flex-wrap:nowrap;
   }
 
   .memo{
@@ -1321,3 +1304,4 @@ piocher();
 
 </body>
 </html>
+
